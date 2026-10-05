@@ -32,3 +32,59 @@ body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:99;opa
 .hero-art .record:after{content:'';position:absolute;inset:42%;border-radius:50%;background:var(--gold)}
 .hero-art .note{position:absolute;left:5%;bottom:12%;font-size:clamp(13px,2vw,25px);font-weight:850;letter-spacing:.08em;writing-mode:vertical-rl}
 @media(max-width:780px){.brand-word{font-size:clamp(52px,18vw,82px);margin-bottom:30px}.hero-art{min-height:230px}.hero-art .record{width:180px;right:-20px}.hero-art .note{font-size:11px}}
+
+/* Search and source-aware exploration. Existing visual system stays in place. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+button,a,input,summary{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+h1[tabindex="-1"]:focus{outline:none}
+.search-open{overflow:hidden}
+.search-bar input{min-width:0}
+.search-inner{padding-top:64px}
+.search-top input{min-width:0;width:100%}
+.search-close{flex-shrink:0;padding:16px 8px}
+.search-count{font-size:12px;color:#c1b9ab;min-height:18px;margin:20px 0}
+.search-filters{display:flex;flex-wrap:wrap;gap:8px}
+.search-filters[hidden]{display:none}
+.search-filter{border:1px solid #625c52;border-radius:999px;background:transparent;color:var(--cream);padding:10px 13px;font-size:10px;letter-spacing:.07em;cursor:pointer}
+.search-filter span{margin-left:5px;opacity:.7}
+.search-filter[aria-pressed="true"]{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.search-overlay .chip{border-color:#625c52;color:var(--cream)}
+.search-hint{font-size:13px;line-height:1.8;color:#b5aea2;max-width:580px;margin:24px 0}
+.search-discover{display:inline-block;color:var(--cream);border-bottom:1px solid var(--gold);padding:12px 0;font-size:13px}
+.result{align-items:center}
+.result div{min-width:0}
+.result strong{overflow-wrap:anywhere;line-height:1.35}
+.result p{font-size:11px;color:#b5aea2;line-height:1.5;margin:7px 0 0}
+.result small{flex-shrink:0;font-size:9px;color:#b5aea2}
+.show-more{display:block;width:100%;margin-top:26px;padding:15px;border:1px solid #625c52;background:none;color:var(--cream);cursor:pointer;font-size:12px}
+.verification{display:inline-block;border:1px solid var(--line);padding:4px 7px;font-size:9px;line-height:1.4;color:var(--muted);vertical-align:middle;white-space:nowrap}
+.verification.verified{border-color:rgba(184,147,85,.5);color:#756039}
+.fact .verification{margin-left:12px}
+.panel>.verification{margin-bottom:18px}
+.panel .definition-title{font-size:clamp(25px,3vw,36px);line-height:1.45;letter-spacing:-.03em;overflow-wrap:anywhere}
+.source-note{max-width:860px;margin:26px auto 0;padding:18px 0;border-top:1px solid var(--line);font-size:12px;line-height:1.7}
+.source-note summary{cursor:pointer;font-weight:700}
+.source-note a{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;overflow-wrap:anywhere}
+.source-note ul{list-style:none;margin:18px 0 0;padding:0}
+.source-note li+li{margin-top:18px}
+.source-note p{font-size:11px;color:var(--muted);margin:6px 0}
+.panel .editorial-note{font-size:11px;border-top:1px solid var(--line);padding-top:18px}
+.track-pagination{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:38px}
+.track-pagination a{display:flex;flex-direction:column;gap:8px;padding:18px 0;border-top:1px solid var(--line)}
+.track-pagination a:last-child{text-align:right}
+.track-pagination strong{font-size:18px;letter-spacing:-.02em;overflow-wrap:anywhere}
+.track-pagination small{font-size:9px;letter-spacing:.1em;color:var(--muted)}
+.thread a strong,.archive-row strong,.dig-item strong,.page-title{overflow-wrap:anywhere;min-width:0}
+.thread a small{flex-shrink:0;max-width:42%;line-height:1.6}
+@media(max-width:780px){
+  .search-inner{width:calc(100% - 34px);padding-top:35px}
+  .search-top input{font-size:clamp(24px,7vw,45px)}
+  .search-close{font-size:9px;padding-right:0}
+  .search-filter{padding:11px 10px;font-size:9px}
+  .result strong{font-size:20px}
+  .result small{font-size:8px}
+  .fact .verification{display:table;margin:8px 0 0}
+  .track-pagination{gap:16px}
+  .thread small{font-size:8px}
+}
