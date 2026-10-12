@@ -1,6 +1,6 @@
 # DIGCIPHER
 
-WAXETCH が展開する、日本語 HIPHOP の言葉・曲・人物・背景を掘る知識プロダクト。Watson は **FIRST ARCHIVE** であり、今後は他アーティストやシーンにも広げていきます。
+WAXETCH が展開する PROJECT 001。日本語 HIPHOP の言葉・曲・人物・背景を掘る知識プロダクト。Watson は **FIRST ARCHIVE** であり、今後は他アーティストやシーンにも広げていきます。WAXETCH の次の研究領域は **PROJECT 002 / CLASSICAL** です（名称・仕様は未決定）。
 
 ## 開発の入口
 - [AGENTS.md](AGENTS.md): Codex の作業指針と維持する要件
