@@ -5,14 +5,14 @@
 正本: https://github.com/yamato015/digcipher
 
 ## ブランドと目的
-WAXETCH は音楽文化・記録・発見を扱う親ブランド。DIGCIPHER は日本語 HIPHOP の言葉、曲、人物、背景、関係を辿る知識プロダクト。「知るほど、もっと深くハマる。」を体験にする。
+WAXETCH は音楽文化・記録・発見を扱う親ブランド。PROJECT 001 は DIGCIPHER（日本語 HIPHOP）。次の領域として PROJECT 002 / CLASSICAL を研究テーマに置く。クラシック側の名称・仕様は未決定であり、DIGCIPHER をそのまま転用する前提にはしない。DIGCIPHER は日本語 HIPHOP の言葉、曲、人物、背景、関係を辿る知識プロダクト。「知るほど、もっと深くハマる。」を体験にする。
 
 Watson は FIRST ARCHIVE — 001。最初の深掘り対象であり、製品全体の対象を Watson に限定しない。他アーティストやシーンへの展開を想定する。
 
 ## UX とデザイン
 Search は気になった語や作品から入る入口、Discover は検索語がなくても入れる入口。探索の方向は WORD → TRACK → ARTIST → STORY → CONNECTION。ただし STORY 等の全機能が実装済みという意味ではない。
 
-現在はホーム検索、VVS / ICE / WATSON / SOUL QUAKE の検索例、Discover、Watson の START HERE と時系列の作品一覧、曲の FOLLOW THE THREAD がある。モバイル下部ナビは SEARCH / DISCOVER / ARTISTS。
+現在はホーム検索、VVS / ICE / WATSON / SOUL QUAKE の検索例、Discover、Watson の START HERE と時系列の作品一覧、曲の CONTEXT TRACE / FOLLOW THE THREAD がある。CONTEXT TRACE は制作クレジット網そのものではなく、曲を理解する周辺文脈を辿るためのUI。現時点では TRACK / RELEASE / ARTIST / CREDIT の確認可能な接続だけを表示し、WORD / PLACE / EVENT は根拠データがある場合だけ追加する。モバイル下部ナビは SEARCH / DISCOVER / ARTISTS。
 
 クリーム（#f7f4ed）、黒（#0b0b0b）、ゴールド（#b89355）を軸に、大きい文字、罫線、余白、レコードの抽象表現を使う。既存の誌面的なデザインを継承する。サイトの説明とブランドページは about.html / waxetch.html。
 
