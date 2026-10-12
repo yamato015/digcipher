@@ -3,9 +3,9 @@
 この文書はリポジトリ全体に適用する。作業前に [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md)、[ROADMAP.md](ROADMAP.md)、[README.md](README.md) と変更対象の実装を読む。ユーザーの最新の明示指示を優先する。
 
 ## 維持するプロダクト方針
-- WAXETCH は親ブランド。DIGCIPHER はその HIPHOP 知識プロダクト。
+- WAXETCH は親ブランド。DIGCIPHER は PROJECT 001 / HIPHOP。次の研究領域は PROJECT 002 / CLASSICAL（名称・仕様は未決定）。クラシック側を DIGCIPHER の単純な着せ替えにしない。
 - Watson は FIRST ARCHIVE。Watson 専用サイトへ変更しない。
-- UX の主入口は Search / Discover。機能一覧やアーティスト一覧をトップの主役にしない。検索後の次の発見と FOLLOW THE THREAD を維持する。
+- UX の主入口は Search / Discover。機能一覧やアーティスト一覧をトップの主役にしない。検索後の次の発見、CONTEXT TRACE、FOLLOW THE THREAD を維持する。CONTEXT TRACE は制作クレジット網の模倣ではなく「なぜこの曲・言葉が重要か」を辿る文脈UI。TRACK / RELEASE / ARTIST / CREDIT は確認可能なデータから表示し、WORD / PLACE / EVENT は根拠がある場合だけ追加する。
 - FACT（裏付けのある事実）と INTERPRETATION（編集上の読み解き）を分離する。未確認の内容を断定せず、空欄・整備中を許容する。
 - 未許諾の歌詞全文・音源・ジャケットを取得、保存、掲載しない。歌詞スクレイピングを追加しない。
 - 固定 DB を中心にする。現在の DB は data.js。閲覧のたびに AI API で解説を生成する設計を導入しない。
