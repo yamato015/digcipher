@@ -5,7 +5,7 @@
 ## 維持するプロダクト方針
 - WAXETCH は親ブランド。DIGCIPHER は PROJECT 001 / HIPHOP。次の研究領域は PROJECT 002 / CLASSICAL（名称・仕様は未決定）。クラシック側を DIGCIPHER の単純な着せ替えにしない。
 - Watson は FIRST ARCHIVE。Watson 専用サイトへ変更しない。
-- UX の主入口は Search / Discover。機能一覧やアーティスト一覧をトップの主役にしない。検索後の次の発見、CONTEXT TRACE、FOLLOW THE THREAD を維持する。CONTEXT TRACE は制作クレジット網の模倣ではなく「なぜこの曲・言葉が重要か」を辿る文脈UI。TRACK / RELEASE / ARTIST / CREDIT は確認可能なデータから表示し、WORD / PLACE / EVENT は根拠がある場合だけ追加する。
+- UX の主入口は一人のアーティストを軸に時代・作品・文化を辿る ERA TRACE（トップページ、`#/era`）。Search / Discover は補助的な入口として維持する。検索後の次の発見、CONTEXT TRACE、FOLLOW THE THREAD を維持する。CONTEXT TRACE は制作クレジット網の模倣ではなく「なぜこの曲・言葉が重要か」を辿る文脈UI。TRACK / RELEASE / ARTIST / CREDIT は確認可能なデータから表示し、WORD / PLACE / EVENT は根拠がある場合だけ追加する。
 - FACT（裏付けのある事実）と INTERPRETATION（編集上の読み解き）を分離する。未確認の内容を断定せず、空欄・整備中を許容する。
 - 未許諾の歌詞全文・音源・ジャケットを取得、保存、掲載しない。歌詞スクレイピングを追加しない。
 - 固定 DB を中心にする。現在の DB は data.js。閲覧のたびに AI API で解説を生成する設計を導入しない。
@@ -13,6 +13,8 @@
 
 - 最優先の独自体験は、出典付きの事実 → 明示された考察 → WHY CONNECTED? → 聴き直す問い、という CURATED DIG。`digs.js` の `sources / facts / readings / trails` の参照関係を壊さない。出典がない曲固有の意味・人物の動機・地元との因果関係を創作しない。
 - `DIFFERENTIATION.md` の公開ゲートと競合戦略を守る。楽曲メタデータやSpotify風の関係図だけで独自性があると表現しない。
+
+- `ERA_TRACE_DESIGN.md` のデザイン仕様を尊重する。参考コンセプト画像に含まれる実在アーティストの写真・アルバムジャケット・未確認イベントを無断で転載・創作しない。空の年代やARTIST/CULTURE表示は率直に未収録とする。
 
 ## 実装と変更の進め方
 - 現状は HTML / CSS / vanilla JavaScript の静的サイト。依頼に必要でないフレームワーク移行、依存追加、大規模整形、デザイン刷新をしない。
@@ -24,7 +26,7 @@
 
 ## 確認と報告
 - ドキュメントのみの変更では内容・相互リンク・差分を確認し、実行コードが不変であることを確認する。
-- JS の変更では `node --check app.js` / `node --check data.js` / `node --check digs.js` / `node tests/verify-content.cjs` を実行する。依存パッケージ不要の基本的な自動検証が導入されている。
+- JS の変更では `node --check app.js` / `node --check data.js` / `node --check digs.js` / `node --check era.js` / `node tests/verify-content.cjs` / `node tests/verify-era.cjs` を実行する。依存パッケージ不要の基本的な自動検証が導入されている。
 - UI 変更では README のローカル起動方法で検索（VVS / ICE / WATSON / SOUL QUAKE）、Discover、アーティスト、リリース、曲、語句、404、戻る操作を確認する。
 - 検索の Enter / Escape / Cmd または Ctrl+K、スマホ幅の下部ナビ、横はみ出し、FACT / INTERPRETATION 表示を確認する。
 - Pages の /digcipher/ 配下で動く相対パスとハッシュルーティングを維持する。
