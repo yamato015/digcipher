@@ -7,11 +7,12 @@ WAXETCH が展開する PROJECT 001。日本語 HIPHOP の言葉・曲・人物�
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md): ブランド、UX、実装、データ、既知の限界
 - [ROADMAP.md](ROADMAP.md): 継続開発の優先候補と受け入れ条件
 - [DIFFERENTIATION.md](DIFFERENTIATION.md): Spotifyと異なる独自価値の仮説と編集品質基準
+- [ERA_TRACE_DESIGN.md](ERA_TRACE_DESIGN.md): 新トップページのUI、ビジュアル、操作、権利上の制約
 
 GitHub の [yamato015/digcipher](https://github.com/yamato015/digcipher) が正本です。Codex で継続する場合はこのリポジトリをローカルに取得してプロジェクトとして開き、上記文書と対象コードを読んでから変更してください。毎回 HTML をチャットへ添付する必要はありません。
 
 ## 方針
-- Search / Discover を中心に、検索から次の発見へつなぐ。
+- ERA TRACEでひとりのアーティストの音楽と時代を辿る。Search / Discover でも新たな発見へつなぐ。
 - FACT と INTERPRETATION を分離し、未確認情報を推測で埋めない。
 - 未許諾の歌詞全文・音源・ジャケットは取得・保存・掲載しない。
 - 固定 DB 中心。閲覧ごとの AI API 生成は導入しない。
@@ -26,7 +27,7 @@ cd digcipher
 python3 -m http.server 8000
 ```
 
-Python 3 が使える環境で実行し、http://localhost:8000/ を開きます。別の静的サーバーでも構いません。データは data.js、公開前に出典を確認した編集記事は digs.js、画面と検索は app.js、デザインは styles.css です。package.json はありませんが、依存不要の `node tests/verify-content.cjs` と GitHub Actions の検証ワークフローが導入されています。
+Python 3 が使える環境で実行し、http://localhost:8000/ を開きます。別の静的サーバーでも構いません。データは data.js、出典付き編集記事は digs.js、時代別UIは era.js / era.css、他の画面と検索は app.js、共通デザインは styles.css です。package.json はありませんが、依存不要の `node tests/verify-content.cjs` / `node tests/verify-era.cjs` と GitHub Actions の検証ワークフローが導入されています。
 
 ## 確認
 UI / データの変更時は検索例 VVS / ICE / WATSON / SOUL QUAKE、CURATED DIG（`#/dig/awa-tokushima`）、Discover、Watson、作品、曲、語句への移動、モバイル下部ナビを確認します。詳しい確認項目は AGENTS.md にあります。
