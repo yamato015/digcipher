@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-label="深夜の街と匿名の人物を描いたオリジナルのアーカイブ用アート">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#080b0e"/><stop offset=".48" stop-color="#1c2227"/><stop offset="1" stop-color="#050709"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#d9dbde" stop-opacity=".7"/><stop offset=".2" stop-color="#d2d5dc" stop-opacity=".23"/><stop offset="1" stop-color="#d2d5dc" stop-opacity="0"/></radialGradient>
+<linearGradient id="jacket" x1=".1" x2=".85" y1="0" y2="1"><stop stop-color="#1a2025"/><stop offset=".55" stop-color="#050709"/><stop offset="1" stop-color="#13181c"/></linearGradient>
+<radialGradient id="haze"><stop stop-color="#e4e7eb" stop-opacity=".35"/><stop offset="1" stop-color="#e4e7eb" stop-opacity="0"/></radialGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="14"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".35" numOctaves="3" seed="8" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer></filter>
+</defs>
+<rect width="1600" height="760" fill="url(#bg)"/>
+<g opacity=".32"><rect x="70" y="30" width="125" height="620" fill="#10161a"/><rect x="265" y="0" width="150" height="550" fill="#161c20"/><rect x="1120" width="180" height="620" fill="#090e13"/><rect x="1400" y="-30" width="160" height="730" fill="#14191c"/></g>
+<g opacity=".58" filter="url(#blur)"><rect x="120" y="160" width="15" height="80" fill="#e6e6e6"/><rect x="230" y="90" width="18" height="112" fill="#bec7d0"/><rect x="365" y="310" width="16" height="100" fill="#b3b9c0"/><rect x="1290" y="80" width="35" height="150" fill="#f4f6fc"/><rect x="1420" y="245" width="18" height="120" fill="#f4f6fc"/><circle cx="1455" cy="140" r="50" fill="#aeb9c2"/><circle cx="1080" cy="85" r="23" fill="#e9e4df"/></g>
+<circle cx="1210" cy="100" r="235" fill="url(#glow)"/><circle cx="870" cy="270" r="290" fill="url(#glow)" opacity=".38"/>
+<path d="M560 760L593 539Q618 492 693 477L745 461L808 466L868 498Q932 502 960 559L1025 760Z" fill="url(#jacket)" stroke="#606970" stroke-opacity=".4" stroke-width="3"/>
+<path d="M685 496L717 461L783 489L834 463L860 495L807 600L772 760L726 596Z" fill="#080c0f"/><path d="M715 468L715 384L818 389L815 481L773 529Z" fill="#20272c"/>
+<path d="M700 384Q676 343 678 297Q680 212 759 196Q841 194 858 283L852 364L823 409L752 439Z" fill="#11181c" stroke="#646b72" stroke-opacity=".43" stroke-width="4"/>
+<path d="M680 302Q675 248 713 212Q773 175 826 208Q857 229 867 274L869 305Q826 283 782 284Q736 290 680 302Z" fill="#0c1014"/>
+<path d="M667 299Q731 270 792 274Q841 270 872 293" stroke="#757d84" stroke-width="8" stroke-linecap="round" stroke-opacity=".52" fill="none"/>
+<path d="M839 313Q885 294 899 312Q874 337 849 342" fill="#13191d"/>
+<path d="M837 344L881 330Q864 374 829 382" fill="#20262b"/>
+<path d="M688 340Q716 349 746 349" stroke="#81888f" stroke-width="3" stroke-opacity=".25" fill="none"/>
+<path d="M795 405Q819 408 838 398" stroke="#e8ecf1" stroke-opacity=".25" stroke-width="2" fill="none"/>
+<path d="M829 394Q874 389 912 369" stroke="#cbd2da" stroke-opacity=".12" stroke-width="3" fill="none"/>
+<ellipse cx="972" cy="354" rx="170" ry="105" fill="url(#haze)"/><ellipse cx="1004" cy="304" rx="185" ry="110" fill="url(#haze)" opacity=".4"/>
+<g fill="#d0d7dd" opacity=".12"><path d="M864 371Q931 367 973 320Q1020 270 1068 256Q1024 291 1002 329Q961 396 864 371Z"/><path d="M864 368Q949 331 981 278Q1021 239 1077 235Q1042 251 1002 310Q954 374 864 368Z"/></g>
+<rect width="1600" height="760" filter="url(#grain)" opacity=".72"/>
+<rect width="1600" height="760" fill="#07090b" opacity=".12"/>
+</svg>
