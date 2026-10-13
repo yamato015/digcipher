@@ -1,0 +1,19 @@
+name: Validate DIGCIPHER editorial data
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: |
+          node --check data.js
+          node --check digs.js
+          node --check app.js
+      - name: Validate editorial references and tracks
+        run: node tests/verify-content.cjs
