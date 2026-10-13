@@ -14,6 +14,9 @@ jobs:
         run: |
           node --check data.js
           node --check digs.js
+          node --check era.js
           node --check app.js
       - name: Validate editorial references and tracks
         run: node tests/verify-content.cjs
+      - name: Validate ERA TRACE design and catalog
+        run: node tests/verify-era.cjs
