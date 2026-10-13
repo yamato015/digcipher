@@ -1,1 +1,54 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f4ed"><meta name="description" content="DIGCIPHER — 日本語HIPHOPを、言葉から人生まで掘る知識プラットフォーム。"><title>DIGCIPHER — by WAXETCH</title><link rel="stylesheet" href="styles.css"></head><body><div class="progress" id="progress"></div><header class="site-header"><div class="shell header-inner"><a href="#/" class="brand-mini">DIGCIPHER<small>by WAXETCH</small></a><nav class="nav"><a href="#/discover">DISCOVER</a><a href="#/artists" class="keep">ARTISTS</a><button class="search-trigger keep" data-search>SEARCH ⌕</button></nav></div></header><main id="app"></main><div class="search-overlay" id="searchOverlay" aria-hidden="true"><div class="search-inner"><div class="search-top"><input id="searchInput" placeholder="Search anything in Hip-Hop" autocomplete="off"><button class="search-close" id="searchClose">ESC</button></div><div id="searchResults"></div></div></div><nav class="bottom-nav"><button data-search>⌕<br>SEARCH</button><a href="#/discover">◉<br>DISCOVER</a><a href="#/artists">♬<br>ARTISTS</a></nav><script src="data.js"></script><script src="digs.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090c0e">
+<meta name="description" content="DIGCIPHER — ひとりのアーティストを、音楽と時代から深く辿る。日本語HIPHOPの文化アーカイブ。">
+<title>DIGCIPHER — ERA TRACE by WAXETCH</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="era.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<aside class="site-rail" aria-label="メインメニュー">
+ <a class="rail-brand" href="#/">DIGCIPHER<small>by <b>WAXETCH</b></small></a>
+ <div class="rail-list">
+  <a class="rail-link" href="#/"><span class="rail-icon">⌂</span>Home</a>
+  <a class="rail-link" href="#/artist/watson"><span class="rail-icon">▣</span>Artist Archive</a>
+  <a class="rail-link is-active" href="#/era"><span class="rail-icon">◷</span>Era Trace</a>
+  <a class="rail-link" href="#/dig/awa-tokushima"><span class="rail-icon">◇</span>Deep Dig</a>
+  <button type="button" class="rail-link" data-search aria-label="検索を開く" style="cursor:pointer;text-align:left;background:transparent"><span class="rail-icon">⌕</span>Search</button>
+ </div>
+ <span class="rail-group-label">FIRST ARCHIVE / 001</span>
+ <div class="rail-list">
+  <a class="rail-index-link is-active" href="#/artist/watson"><span class="rail-avatar gold">W</span>Watson</a>
+  <a class="rail-index-link" href="#/artists"><span class="rail-avatar">+</span>Connected Artists ↗</a>
+ </div>
+ <div class="rail-spacer"></div>
+ <div class="rail-projects"><span>WAXETCH / PROJECTS</span>
+  <a href="#/era">◉ &nbsp; DIGCIPHER<small>JAPANESE HIPHOP</small></a>
+  <a class="secondary" href="waxetch.html">○ &nbsp; CLASSICAL<small>PROJECT 002 · RESEARCH</small></a>
+ </div>
+</aside>
+<header class="site-header"><div class="shell header-inner">
+ <a href="#/" class="brand-mini">DIGCIPHER<small>by WAXETCH</small></a>
+ <nav class="nav"><a href="#/era">ERA TRACE</a><a href="#/discover">DISCOVER</a><a href="#/artists" class="keep">ARTISTS</a><button class="search-trigger keep" data-search>SEARCH ⌕</button></nav>
+</div></header>
+<main id="app"></main>
+<div class="search-overlay" id="searchOverlay" aria-hidden="true">
+ <div class="search-inner"><div class="search-top">
+  <input id="searchInput" aria-label="楽曲・人物・言葉を検索" placeholder="曲・アーティスト・言葉を検索" autocomplete="off">
+  <button class="search-close" id="searchClose">ESC / CLOSE</button>
+ </div><div id="searchResults"></div></div>
+</div>
+<nav class="bottom-nav" aria-label="スマートフォン用メニュー">
+ <a href="#/era">◷<br>ERA TRACE</a>
+ <button data-search>⌕<br>SEARCH</button>
+ <a href="#/discover">◇<br>DISCOVER</a>
+</nav>
+<script src="data.js"></script>
+<script src="digs.js"></script>
+<script src="era.js"></script>
+<script src="app.js"></script>
+</body></html>
