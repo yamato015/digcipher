@@ -6,6 +6,7 @@ WAXETCH が展開する PROJECT 001。日本語 HIPHOP の言葉・曲・人物�
 - [AGENTS.md](AGENTS.md): Codex の作業指針と維持する要件
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md): ブランド、UX、実装、データ、既知の限界
 - [ROADMAP.md](ROADMAP.md): 継続開発の優先候補と受け入れ条件
+- [DIFFERENTIATION.md](DIFFERENTIATION.md): Spotifyと異なる独自価値の仮説と編集品質基準
 
 GitHub の [yamato015/digcipher](https://github.com/yamato015/digcipher) が正本です。Codex で継続する場合はこのリポジトリをローカルに取得してプロジェクトとして開き、上記文書と対象コードを読んでから変更してください。毎回 HTML をチャットへ添付する必要はありません。
 
@@ -25,10 +26,10 @@ cd digcipher
 python3 -m http.server 8000
 ```
 
-Python 3 が使える環境で実行し、http://localhost:8000/ を開きます。別の静的サーバーでも構いません。データは data.js、画面と検索は app.js、デザインは styles.css です。現在、package.json と自動テスト基盤はありません。
+Python 3 が使える環境で実行し、http://localhost:8000/ を開きます。別の静的サーバーでも構いません。データは data.js、公開前に出典を確認した編集記事は digs.js、画面と検索は app.js、デザインは styles.css です。package.json はありませんが、依存不要の `node tests/verify-content.cjs` と GitHub Actions の検証ワークフローが導入されています。
 
 ## 確認
-UI / データの変更時は検索例 VVS / ICE / WATSON / SOUL QUAKE、Discover、Watson、作品、曲、語句への移動、モバイル下部ナビを確認します。詳しい確認項目は AGENTS.md にあります。
+UI / データの変更時は検索例 VVS / ICE / WATSON / SOUL QUAKE、CURATED DIG（`#/dig/awa-tokushima`）、Discover、Watson、作品、曲、語句への移動、モバイル下部ナビを確認します。詳しい確認項目は AGENTS.md にあります。
 
 ## GitHub Pages
 [公開予定 URL](https://yamato015.github.io/digcipher/) は `https://yamato015.github.io/digcipher/` です。公開完了を保証するリンクではありません。
