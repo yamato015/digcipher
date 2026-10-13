@@ -11,6 +11,9 @@
 - 固定 DB を中心にする。現在の DB は data.js。閲覧のたびに AI API で解説を生成する設計を導入しない。
 - GitHub の yamato015/digcipher を正本とする。チャット添付ファイルを更新の正本にしない。
 
+- 最優先の独自体験は、出典付きの事実 → 明示された考察 → WHY CONNECTED? → 聴き直す問い、という CURATED DIG。`digs.js` の `sources / facts / readings / trails` の参照関係を壊さない。出典がない曲固有の意味・人物の動機・地元との因果関係を創作しない。
+- `DIFFERENTIATION.md` の公開ゲートと競合戦略を守る。楽曲メタデータやSpotify風の関係図だけで独自性があると表現しない。
+
 ## 実装と変更の進め方
 - 現状は HTML / CSS / vanilla JavaScript の静的サイト。依頼に必要でないフレームワーク移行、依存追加、大規模整形、デザイン刷新をしない。
 - styles.css のクリーム・黒・ゴールド、文字中心の誌面的構成、余白、罫線、レコードの抽象表現、モバイル下部ナビを尊重する。
@@ -21,7 +24,7 @@
 
 ## 確認と報告
 - ドキュメントのみの変更では内容・相互リンク・差分を確認し、実行コードが不変であることを確認する。
-- JS の変更では Node.js があれば `node --check app.js` / `node --check data.js` を実行する。現在、package.json と自動テスト基盤はない。
+- JS の変更では `node --check app.js` / `node --check data.js` / `node --check digs.js` / `node tests/verify-content.cjs` を実行する。依存パッケージ不要の基本的な自動検証が導入されている。
 - UI 変更では README のローカル起動方法で検索（VVS / ICE / WATSON / SOUL QUAKE）、Discover、アーティスト、リリース、曲、語句、404、戻る操作を確認する。
 - 検索の Enter / Escape / Cmd または Ctrl+K、スマホ幅の下部ナビ、横はみ出し、FACT / INTERPRETATION 表示を確認する。
 - Pages の /digcipher/ 配下で動く相対パスとハッシュルーティングを維持する。
