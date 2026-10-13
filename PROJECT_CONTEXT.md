@@ -10,11 +10,11 @@ WAXETCH は音楽文化・記録・発見を扱う親ブランド。PROJECT 001 
 Watson は FIRST ARCHIVE — 001。最初の深掘り対象であり、製品全体の対象を Watson に限定しない。他アーティストやシーンへの展開を想定する。
 
 ## UX とデザイン
-Search は気になった語や作品から入る入口、Discover は検索語がなくても入れる入口。探索の方向は WORD → TRACK → ARTIST → STORY → CONNECTION。ただし STORY 等の全機能が実装済みという意味ではない。
+ERA TRACE は一人のアーティストから時代と作品を辿るトップ入口。Search は気になった語や作品から入る入口、Discover は検索語がなくても入れる補助入口。探索の方向は ARTIST → ERA → RELEASE / TRACK → DEEP DIG → CONTEXT。ただし STORY 等の全機能が実装済みという意味ではない。
 
-現在はホーム検索、VVS / ICE / WATSON / SOUL QUAKE の検索例、Discover、Watson の START HERE と時系列の作品一覧、曲の CONTEXT TRACE / FOLLOW THE THREAD がある。CONTEXT TRACE は制作クレジット網そのものではなく、曲を理解する周辺文脈を辿るためのUI。現時点では TRACK / RELEASE / ARTIST / CREDIT の確認可能な接続だけを表示し、WORD / PLACE / EVENT は根拠データがある場合だけ追加する。モバイル下部ナビは SEARCH / DISCOVER / ARTISTS。
+現在のホームはダークテーマのERA TRACE。左ナビ、2021〜2026の収録済み7作品を並べた年表、MUSIC/ARTIST/CULTUREのフィルター、選択年・作品に応じる詳細パネル、関連した出典付きCURATED DIGの導線がある。モバイルでは年代を横スクロールでき、詳細は下段に表示。Search、Discover、Watson の START HERE と作品一覧、曲の CONTEXT TRACE / FOLLOW THE THREAD も維持している。CONTEXT TRACE は制作クレジット網そのものではなく、曲を理解する周辺文脈を辿るためのUI。現時点では TRACK / RELEASE / ARTIST / CREDIT の確認可能な接続だけを表示し、WORD / PLACE / EVENT は根拠データがある場合だけ追加する。モバイル下部ナビは SEARCH / DISCOVER / ARTISTS。
 
-クリーム（#f7f4ed）、黒（#0b0b0b）、ゴールド（#b89355）を軸に、大きい文字、罫線、余白、レコードの抽象表現を使う。既存の誌面的なデザインを継承する。サイトの説明とブランドページは about.html / waxetch.html。
+DIGCIPHERは黒〜チャコールと暖色のアクセント、セリフ書体の見出し、罫線、オリジナルのSVG夜景と抽象的なアルバムカードを使用。WAXETCHブランドページは従来のクリーム主体を維持。サイトの説明とブランドページは about.html / waxetch.html。
 
 ## コンテンツ方針
 FACT は確認できる日付、収録、曲順、時間、客演など。INTERPRETATION は根拠を踏まえた編集解説。意味的な関係や人物背景を推測で補完しない。出典と確認状態を明示する方針だが、その管理・表示は未完成。
@@ -24,9 +24,12 @@ FACT は確認できる日付、収録、曲順、時間、客演など。INTERP
 ## 現在の実装
 | ファイル | 役割 |
 | --- | --- |
-| index.html | アプリの枠、検索オーバーレイ、ナビ、スクリプト読み込み |
-| app.js | ハッシュルーティング、画面生成、検索、表示アニメーション |
-| data.js | window.DIGCIPHER_DATA の固定データ |
+| index.html | 共通サイドバー、検索、モバイルナビ、スクリプト読み込み |
+| app.js | ハッシュルーティング、曲・作品・人物・語句ページ、検索 |
+| data.js | window.DIGCIPHER_DATA の固定カタログ（全件の外部照合は未完了） |
+| digs.js | 根拠付きDIGの出典、FACT、INTERPRETATION、探索経路 |
+| era.js / era.css | 年表UI、フィルター・年/作品選択、ダークデザイン |
+| assets/era-night.svg | オリジナルのシネマティック背景。写真やジャケットの無断転載なし |
 | styles.css | 共通デザインとモバイル対応 |
 | about.html / waxetch.html | 製品コンセプト / 親ブランド |
 | assets/*.svg | DIGCIPHER / WAXETCH のロゴ |
@@ -35,7 +38,7 @@ FACT は確認できる日付、収録、曲順、時間、客演など。INTERP
 
 ビルド工程、package.json、API、認証、サーバー DB、自動テスト基盤はない。データはブラウザに読み込んで検索する。正規化は NFKC・小文字化・前後空白除去、部分一致。検索件数にはカテゴリ別上限がある。
 
-ルート: `#/`、`#/discover`、`#/artists`、`#/artist/<slug>`、`#/release/<slug>`、`#/track/<encoded-id>`、`#/term/<slug>`。track ID は encodeURIComponent を使う。実在しない対象は NOT FOUND。
+ルート: `#/`（ERA TRACE）、`#/era`（ERA TRACE）、`#/dig/awa-tokushima`、`#/discover`、`#/artists`、`#/artist/<slug>`、`#/release/<slug>`、`#/track/<encoded-id>`、`#/term/<slug>`。track ID は encodeURIComponent を使う。実在しない対象は NOT FOUND。
 
 ## 固定 DB の形
 - artists: name, slug。
