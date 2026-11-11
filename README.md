@@ -37,4 +37,4 @@ UI / データの変更時は検索例 VVS / ICE / WATSON / SOUL QUAKE、CURATED
 
 .github/workflows/pages.yml は main への push または手動実行でリポジトリルートを Pages に配信します。GitHub の [Pages 設定](https://github.com/yamato015/digcipher/settings/pages) で Source が GitHub Actions になっているか確認してください。
 
-2026-10-04 の引き継ぎ確認では [直近 run #9](https://github.com/yamato015/digcipher/actions/runs/35309914229) は失敗でした。初回有効化と公開成功は未確認です。公開を確認する際は最新の [Actions](https://github.com/yamato015/digcipher/actions) と実 URL の両方を確認してください。ルート全体を公開するため、秘密情報や非公開資料を置かないでください。
+2026-11-11 の確認では、main の `0d85a1b` に対する [Pages run #41](https://github.com/yamato015/digcipher/actions/runs/38398765852)（2026-10-13、再実行 2 回目）は success でした。ただし実 URL の表示はこの確認では未検証です。公開を確認する際は最新の [Actions](https://github.com/yamato015/digcipher/actions) と実 URL の両方を確認してください。ルート全体を公開するため、秘密情報や非公開資料を置かないでください。
