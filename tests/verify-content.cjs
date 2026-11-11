@@ -46,4 +46,8 @@ const app=fs.readFileSync('app.js','utf8');
 assert(app.includes("p[0]==='dig'?dig(p[1])"),'Route must include editorial DIG');
 assert(app.includes('WHY CONNECTED?'),'Why-connected section is essential');
 assert(!G.trails.some(t=>Object.keys(t).some(k=>/lyrics|audio|cover|excerpt/i.test(k))),'Do not embed unauthorized copyrighted material');
+const pol=fs.existsSync('policy.html')?fs.readFileSync('policy.html','utf8'):'';
+assert(pol,'policy.html must exist');
+for(const id of ['operator','corrections','rights','privacy'])assert(pol.includes('id="'+id+'"'),'policy.html needs #'+id);
+assert(app.includes('policy.html'),'app.js must link to policy.html');
 console.log('PASS: editorial source integrity, catalogs, routes, and rights-oriented structure');
